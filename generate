@@ -1,0 +1,74 @@
+Script wurde gestartet: Sam 27 Okt 2012 14:43:50 CEST
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ sudo service lightdm restart[C[C[C[C[Ksudo service lightdm restart[Krails generate scaffold organisation user:references name:string
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20121027124414_create_organisations.rb
+[1m[32m      create[0m    app/models/organisation.rb
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/models/organisation_spec.rb
+[1m[37m      invoke[0m      machinist
+[1m[32m      append[0m        spec/support/blueprints.rb
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :organisations
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/organisations_controller.rb
+[1m[37m      invoke[0m    haml
+[1m[32m      create[0m      app/views/organisations
+[1m[32m      create[0m      app/views/organisations/index.html.haml
+[1m[32m      create[0m      app/views/organisations/edit.html.haml
+[1m[32m      create[0m      app/views/organisations/show.html.haml
+[1m[32m      create[0m      app/views/organisations/new.html.haml
+[1m[32m      create[0m      app/views/organisations/_form.html.haml
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/controllers/organisations_controller_spec.rb
+[1m[32m      create[0m      spec/routing/organisations_routing_spec.rb
+[1m[37m      invoke[0m      rspec
+[1m[32m      create[0m        spec/requests/organisations_spec.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/organisations_helper.rb
+[1m[37m      invoke[0m      rspec
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/organisations.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/organisations.css.scss
+[1m[37m      invoke[0m  scss
+[1m[32m      create[0m    app/assets/stylesheets/scaffolds.css.scss
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ rake db:migrate
+==  CreateOrganisations: migrating ============================================
+-- create_table(:organisations)
+HINWEIS:  CREATE TABLE erstellt implizit eine Sequenz »organisations_id_seq« für die »serial«-Spalte »organisations.id«
+HINWEIS:  CREATE TABLE / PRIMARY KEY erstellt implizit einen Index »organisations_pkey« für Tabelle »organisations«
+   -> 0.0257s
+-- add_index(:organisations, :user_id)
+   -> 0.0083s
+==  CreateOrganisations: migrated (0.0345s) ===================================
+
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ git st
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   app/models/user.rb[m
+#	[31mmodified:   config/routes.rb[m
+#	[31mmodified:   db/schema.rb[m
+#	[31mmodified:   spec/support/blueprints.rb[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31mapp/assets/javascripts/organisations.js.coffee[m
+#	[31mapp/assets/stylesheets/organisations.css.scss[m
+#	[31mapp/assets/stylesheets/scaffolds.css.scss[m
+#	[31mapp/controllers/organisations_controller.rb[m
+#	[31mapp/helpers/organisations_helper.rb[m
+#	[31mapp/models/organisation.rb[m
+#	[31mapp/views/organisations/[m
+#	[31mdb/migrate/20121027124414_create_organisations.rb[m
+#	[31mgenerate[m
+#	[31mspec/controllers/organisations_controller_spec.rb[m
+#	[31mspec/models/organisation_spec.rb[m
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ git add .
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ 
+]0;c
