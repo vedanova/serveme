@@ -71,4 +71,29 @@ HINWEIS:  CREATE TABLE / PRIMARY KEY erstellt implizit einen Index »organisatio
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ git add .
 ]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ 
-]0;c
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ git commit -am ""a"d"d"e"d" "o"r"g"a"n"i"s"a"t"i"o"n"s"
+[master 93a5a5e] added organisations
+ 19 files changed, 485 insertions(+), 3 deletions(-)
+ create mode 100644 app/assets/javascripts/organisations.js.coffee
+ create mode 100644 app/assets/stylesheets/organisations.css.scss
+ create mode 100644 app/assets/stylesheets/scaffolds.css.scss
+ create mode 100644 app/controllers/organisations_controller.rb
+ create mode 100644 app/helpers/organisations_helper.rb
+ create mode 100644 app/models/organisation.rb
+ create mode 100644 app/views/organisations/_form.html.haml
+ create mode 100644 app/views/organisations/edit.html.haml
+ create mode 100644 app/views/organisations/index.html.haml
+ create mode 100644 app/views/organisations/new.html.haml
+ create mode 100644 app/views/organisations/show.html.haml
+ create mode 100644 db/migrate/20121027124414_create_organisations.rb
+ create mode 100644 generate
+ create mode 100644 spec/controllers/organisations_controller_spec.rb
+ create mode 100644 spec/models/organisation_spec.rb
+]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ rails generate scaffold place name:string organisation:references [1@:[1@d[1@e[1@s[1@c[1@r[1P[1P[1P[1P[1P[1P[1@d[1@e[1@s[1@c[1@r[1@i[1@p[1@t[1@i[C[1@onorganisation:references  [A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:organisation:references  [A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C organisation:references [A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Corganisation:references [K[A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctorganisation:references [A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ceorganisation:references [A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cxorganisation:referenc[1@e[A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctorganisation:referen[1@c[A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C organisation:refere[1@n[A]0;corck@w520: ~/programming/servemecorck@w520:~/programming/serveme$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20121027132641_create_places.rb
+[1m[32m      create[0m    app/models/place.rb
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/models/place_spec.rb
+[1m

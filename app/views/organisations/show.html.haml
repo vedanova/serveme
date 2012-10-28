@@ -1,6 +1,21 @@
 %p#notice= notice
 %h1= @organisation.name
 
+%h3
+  = "Places"
+
+- unless @places.blank?
+  %table.table.table-stripped.table-bordered
+    - @places.each do |place|
+      %tr
+        %td= link_to place.name, place_path(place)
+- else
+  %p.lead
+    You haven't created a place yet. A place is a grouping of locations, think of "1st floor", "beer garden", "dining room" ...
+
+  %p
+    = link_to "Create place", new_organisation_place_path(@organisation), class: "btn btn-primary"
+
 = link_to 'Edit', edit_organisation_path(@organisation)
 \|
 = link_to 'Back', organisations_path

@@ -17,7 +17,7 @@ class OrganisationsController < ApplicationController
   # GET /organisations/1.json
   def show
     @organisation = current_user.organisations.find(params[:id])
-
+    @places = @organisation.places
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @organisation }

@@ -1,0 +1,23 @@
+%h1
+  Listing places for
+  = @organisation.name
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @places.each do |place|
+    %tr
+      %td= place.name
+      %td= place.description
+      %td= link_to 'Show', [@organisation, place]
+      %td= link_to 'Edit', edit_organisation_place_path(@organisation, place)
+      %td= link_to 'Destroy', [@organisation, place], method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Place', new_organisation_place_path(@organisation)

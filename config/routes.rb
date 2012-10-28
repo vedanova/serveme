@@ -1,5 +1,9 @@
 Serveme::Application.routes.draw do
-  resources :organisations
+
+
+  resources :organisations do
+    resources :places
+  end
 
   authenticated :user do
     root :to => 'organisations#index'
