@@ -19,3 +19,7 @@ end
 Place.blueprint do
   # Attributes here
 end
+
+Site.blueprint do
+  # Attributes here
+end

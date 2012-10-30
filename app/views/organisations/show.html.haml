@@ -2,19 +2,19 @@
 %h1= @organisation.name
 
 %h3
-  = "Places"
+  = "Sites"
 
-- unless @places.blank?
+- unless @sites.blank?
   %table.table.table-stripped.table-bordered
-    - @places.each do |place|
+    - @sites.each do |site|
       %tr
-        %td= link_to place.name, place_path(place)
+        %td= link_to site.name, site_path(site)
 - else
   %p.lead
-    You haven't created a place yet. A place is a grouping of locations, think of "1st floor", "beer garden", "dining room" ...
+    You haven't created a site yet. A site is a grouping of locations, think of "1st floor", "beer garden", "dining room" ...
 
   %p
-    = link_to "Create place", new_organisation_place_path(@organisation), class: "btn btn-primary"
+    = link_to "Create site", new_organisation_site_path(@organisation), class: "btn btn-primary"
 
 = link_to 'Edit', edit_organisation_path(@organisation)
 \|

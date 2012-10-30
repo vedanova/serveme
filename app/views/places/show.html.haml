@@ -1,15 +1,11 @@
-%p#notice= notice
-
-%p
-  %b Name:
+%h1
   = @place.name
-%p
-  %b Description:
+%p.lead
   = @place.description
 %p
-  %b Organisation:
-  = @place.organisation.name
+  %b Place:
+  = @place.site.name
 
-= link_to 'Edit', edit_organisation_place_path(@organisation, @place)
+= link_to 'Edit', edit_site_place_path(@site, @place)
 \|
-= link_to 'Back', organisation_places_path(@organisation)
+= link_to 'Back', site_places_path(@site)

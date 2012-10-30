@@ -38,7 +38,7 @@ describe PlacesController do
     it "assigns all places as @places" do
       place = Place.create! valid_attributes
       get :index, {}, valid_session
-      assigns(:places).should eq([place])
+      assigns(:sites).should eq([place])
     end
   end
 

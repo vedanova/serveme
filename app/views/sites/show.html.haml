@@ -1,0 +1,20 @@
+%h1
+  = @site.name
+%p.lead
+  = @site.description
+  
+- unless @places.blank?
+  %table.table.table-stripped.table-bordered
+    - @places.each do |site|
+      %tr
+        %td= link_to site.name, site_path(site)
+- else
+  %p.lead
+    You haven't created a place yet. A place could be a table in a restaurant or wherever you place your NFC tag.
+
+  %p
+    = link_to "Create place", new_site_place_path(@site), class: "btn btn-primary"
+
+= link_to 'Edit', edit_organisation_site_path(@organisation, @site)
+\|
+= link_to 'Back', [@organisation, @site]

@@ -1,8 +1,11 @@
 Serveme::Application.routes.draw do
 
+  resources :sites do
+    resources :places
+  end
 
   resources :organisations do
-    resources :places
+    resources :sites
   end
 
   authenticated :user do
