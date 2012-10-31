@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :show
   before_filter :setup_site
 
   # GET /places
@@ -20,8 +20,7 @@ class PlacesController < ApplicationController
     @place = @site.places.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @place }
+      format.html { render :layout => 'mobile'}
     end
   end
 
@@ -89,7 +88,7 @@ class PlacesController < ApplicationController
 
   def setup_site
     @site = Site.find(params[:site_id])
-    raise "Place does not belong to user" unless @site.organisation.user_id == current_user.id
+    # raise "Place does not belong to user" unless @site.organisation.user_id == current_user.id
   end
 end
 

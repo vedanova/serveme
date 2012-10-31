@@ -5,9 +5,9 @@
   
 - unless @places.blank?
   %table.table.table-stripped.table-bordered
-    - @places.each do |site|
+    - @places.each do |place|
       %tr
-        %td= link_to site.name, site_path(site)
+        %td= link_to place.name, site_place_path(@site, place)
 - else
   %p.lead
     You haven't created a place yet. A place could be a table in a restaurant or wherever you place your NFC tag.

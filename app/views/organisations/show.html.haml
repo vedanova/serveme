@@ -8,7 +8,7 @@
   %table.table.table-stripped.table-bordered
     - @sites.each do |site|
       %tr
-        %td= link_to site.name, site_path(site)
+        %td= link_to site.name, organisation_site_path(@organisation, site)
 - else
   %p.lead
     You haven't created a site yet. A site is a grouping of locations, think of "1st floor", "beer garden", "dining room" ...

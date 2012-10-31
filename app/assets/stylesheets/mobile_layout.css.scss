@@ -1,0 +1,14 @@
+@import 'bootstrap.min.css';
+
+.btn-mobile {
+  height: 60px;
+  font-size: 2em;
+  padding-top: 18px;
+}
+
+.btn-block.btn-mobile {
+  margin-top:30px
+}
+.btn-block.btn-mobile:first-child {
+  margin-top:0px
+}

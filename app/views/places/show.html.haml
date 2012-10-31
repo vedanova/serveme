@@ -1,11 +1,5 @@
-%h1
+%h3
   = @place.name
-%p.lead
-  = @place.description
-%p
-  %b Place:
-  = @place.site.name
 
-= link_to 'Edit', edit_site_place_path(@site, @place)
-\|
-= link_to 'Back', site_places_path(@site)
+= link_to 'Order', '#', class: "btn btn-info btn-block btn-mobile"
+= link_to 'The bill please', '#', class: "btn btn-primary btn-success btn-block btn-mobile"
