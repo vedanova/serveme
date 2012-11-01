@@ -27,3 +27,7 @@ end
 Request.blueprint do
   # Attributes here
 end
+
+Feedback.blueprint do
+  # Attributes here
+end

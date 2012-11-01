@@ -3,3 +3,4 @@
 
 = link_to 'New order', requests_path(type: 'Order', place_id: @place.id), method: :post, class: "btn btn-info btn-block btn-mobile"
 = link_to 'The bill please', requests_path(type: 'Bill', place_id: @place.id), method: :post, class: "btn btn-primary btn-success btn-block btn-mobile"
+= link_to 'Feedback', new_feedback_path(type: 'Feedback', place_id: @place.id), class: "btn btn-primary btn-warning btn-block btn-mobile"

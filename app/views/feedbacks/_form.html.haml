@@ -1,0 +1,12 @@
+= simple_form_for(@feedback) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :subject
+    = f.input :content
+    = f.input :email
+    = f.input :phone
+    = f.association :place, :as => :hidden
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-mobile btn-primary'
