@@ -1,5 +1,7 @@
 Serveme::Application.routes.draw do
 
+  resources :requests
+
   resources :sites do
     resources :places
   end

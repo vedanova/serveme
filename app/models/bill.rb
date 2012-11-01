@@ -1,0 +1,6 @@
+class Bill < Request
+
+
+
+
+end

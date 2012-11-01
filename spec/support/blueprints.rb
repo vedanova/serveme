@@ -23,3 +23,7 @@ end
 Site.blueprint do
   # Attributes here
 end
+
+Request.blueprint do
+  # Attributes here
+end
