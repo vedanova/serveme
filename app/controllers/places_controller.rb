@@ -47,7 +47,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to site_place_path(@site, @place), notice: 'Place was successfully created.' }
+        format.html { redirect_to organisation_site_path(@site.organisation, @site), notice: 'Place was successfully created.' }
         format.json { render json: @place, status: :created, location: @place }
       else
         format.html { render action: "new" }

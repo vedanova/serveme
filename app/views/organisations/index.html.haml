@@ -1,6 +1,11 @@
-%h1 Listing organisations
+%h1 Organisations
 
-%table
+%table.table.table-bordered.table-striped.table-hover
+  %colgroup
+    %col.name
+    %col.button
+    %col.button
+    %col.button
   %tr
     %th Name
     %th
@@ -9,10 +14,10 @@
 
   - @organisations.each do |organisation|
     %tr
-      %td= organisation.name
-      %td= link_to 'Show', organisation
-      %td= link_to 'Edit', edit_organisation_path(organisation)
-      %td= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to organisation.name, organisation
+      %td= link_to 'Show', organisation, class: "btn"
+      %td= link_to 'Edit', edit_organisation_path(organisation), class: "btn"
+      %td= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"
 
 %br
 

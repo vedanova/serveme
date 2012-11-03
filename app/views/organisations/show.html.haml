@@ -5,16 +5,31 @@
   = "Sites"
 
 - unless @sites.blank?
-  %table.table.table-stripped.table-bordered
+  %table.table.table-bordered.table-striped.table-hover
+    %colgroup
+      %col.name
+      %col.button
+      %col.button
+      %col.button
+    %tr
+      %th
+        Name
+      %th
+      %th
+      %th
+
     - @sites.each do |site|
       %tr
         %td= link_to site.name, organisation_site_path(@organisation, site)
+        %td= link_to 'Show', site, class: "btn"
+        %td= link_to 'Edit', edit_organisation_site_path(@organisation, site), class: "btn"
+        %td= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"
 - else
   %p.lead
     You haven't created a site yet. A site is a grouping of locations, think of "1st floor", "beer garden", "dining room" ...
 
-  %p
-    = link_to "Create site", new_organisation_site_path(@organisation), class: "btn btn-primary"
+%p
+  = link_to "Create site", new_organisation_site_path(@organisation), class: "btn btn-primary"
 
 = link_to 'Edit', edit_organisation_path(@organisation)
 \|
