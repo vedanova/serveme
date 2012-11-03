@@ -1,0 +1,23 @@
+= javascript_include_tag "http://js.pusher.com/1.12/pusher.min.js"
+
+:javascript
+  // Enable pusher logging - don't include this in production
+      Pusher.log = function(message) {
+        if (window.console && window.console.log) window.console.log(message);
+      };
+
+      // Flash fallback logging - don't include this in production
+      WEB_SOCKET_DEBUG = true;
+
+      var pusher = new Pusher('#{PUSHER_KEY}');
+      var channel = pusher.subscribe('#{PUSHER_REQUEST_CHANNEL}');
+      channel.bind('new_request', function(data) {
+        console.log(data);
+        update = "<li>" + data['message'] + "</li>";
+        $('#live-updates').append(update);
+      });
+
+%h1
+  Orders
+
+%ul#live-updates

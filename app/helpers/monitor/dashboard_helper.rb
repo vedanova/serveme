@@ -1,0 +1,2 @@
+module Monitor::DashboardHelper
+end

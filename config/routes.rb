@@ -1,5 +1,9 @@
 Serveme::Application.routes.draw do
 
+  namespace :monitor do
+    resources :dashboard, only: :index
+  end
+
   resources :feedbacks
 
   resources :requests
