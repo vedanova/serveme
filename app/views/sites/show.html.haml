@@ -9,13 +9,16 @@
       %col.name
       %col.button
       %col.button
+      %col.button
     %tr
       %th Name
+      %th
       %th
       %th
     - @places.each do |place|
       %tr
         %td= link_to place.name, site_place_path(@site, place)
+        %td= link_to 'Test', [@site, place], class: "btn btn-info"
         %td= link_to 'Edit', edit_site_place_path(@site, place), class: "btn"
         %td= link_to 'Destroy', site_place_path(@site, place), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"
 
