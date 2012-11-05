@@ -21,7 +21,7 @@
     - @sites.each do |site|
       %tr
         %td= link_to site.name, organisation_site_path(@organisation, site)
-        %td= link_to 'Show', site, class: "btn"
+        %td= link_to 'Show', organisation_site_path(@organisation, site), class: "btn"
         %td= link_to 'Edit', edit_organisation_site_path(@organisation, site), class: "btn"
         %td= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"
 - else
