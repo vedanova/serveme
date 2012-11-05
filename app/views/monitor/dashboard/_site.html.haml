@@ -1,0 +1,5 @@
+.row{class: "site-#{site.id}"}
+  .span12
+    .site-monitoring
+      %h2= site.name
+      = render partial: 'place', collection: site.places, as: :place

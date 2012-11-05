@@ -10,6 +10,9 @@
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
+$green: #adff2f;
+$red: #ff4500;
+
 @import 'bootstrap_and_overrides';
 
 col.button {
@@ -20,3 +23,35 @@ textarea {
   height: 70px;
   width: 300px;
 }
+
+.place {
+  width: 140px;
+  height: 140px;
+  background-color: $green;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  margin: 10px;
+  &.request {
+    background-color: $red;
+  }
+  .head {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px dashed black;
+  }
+  li {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+}
+a {
+      color: black;
+  }
+
+.left {
+  float:left;
+}
+
+

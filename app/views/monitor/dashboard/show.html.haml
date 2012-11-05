@@ -10,22 +10,16 @@
       WEB_SOCKET_DEBUG = true;
 
       var pusher = new Pusher('#{PUSHER_KEY}');
-      var channel = pusher.subscribe('#{PUSHER_REQUEST_CHANNEL}');
-      channel.bind('new_request', function(data) {
+      var channel = pusher.subscribe("site-#{@site.id}-channel");
+      channel.bind('new-request', function(data) {
         console.log(data);
+        newOrder(data['place'], data['message']);
         update = "<li>" + data['message'] + "</li>";
         $('#live-updates').append(update);
       });
 
+= render :partial => 'site', :locals => {site:  @site}
+
 %ul#live-updates
 
-- @organisations.each do |organisation|
-  %h3
-    = organisation.name
-  .row
-    .span12
-      %h4 Sites
-      .order-list
-        %ul.unstyled
-          - organisation.sites.each do |site|
-            %li= link_to site.name, monitor_dashboard_path(site)
+

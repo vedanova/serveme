@@ -7,11 +7,10 @@ class Request < ActiveRecord::Base
   after_create :push_msg
 
   def push_msg
-     place_name = place.name
-     site_name = place.site.name
-     time_at =  Time.now.strftime("%H:%M:%S")
-     msg = "#{time_at} - #{self.type}: #{place_name} (#{site_name})"
-     Pusher[PUSHER_REQUEST_CHANNEL].trigger('new_request', {:message => msg})
+     site = place.site
+     time_at =  Time.now.strftime("%H:%M")
+     msg = "#{time_at} - #{self.type}"
+     Pusher["site-#{site.id}-channel"].trigger("new-request", {:message => msg, site: site.id, place: place.id })
   end
 
 end

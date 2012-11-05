@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+function newOrder(place_id, msg) {
+    selector = "#place-" + place_id;
+    $(selector).addClass('request');
+    $(selector).find('ul').prepend("<li>" + msg + "</li>");
+}
+
+$(function() {
+    $('.place').on('click', function(e) {
+        e.preventDefault();
+        $(this).removeClass('request');
+    })
+})
